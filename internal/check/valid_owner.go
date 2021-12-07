@@ -223,7 +223,7 @@ func (v *ValidOwner) validateTeam(ctx context.Context, name string) *validateErr
 	}
 
     /*
-	teamHasPermission := func() bool {
+	teamHasWritePermission := func() bool {
 		for k, v := range repo.GetPermissions() {
 			if !v {
 				continue
@@ -244,9 +244,9 @@ func (v *ValidOwner) validateTeam(ctx context.Context, name string) *validateErr
 		return false
 	}
 
-	if !teamHasPermission() {
+	if !teamHasWritePermission() {
 		return newValidateError(
-			"Team %q cannot review PRs on %q as neither it nor any parent team has permissions.",
+			"Team %q cannot review PRs on %q as neither it nor any parent team has write permissions.",
 			team, v.orgRepoName)
 	}
     */
