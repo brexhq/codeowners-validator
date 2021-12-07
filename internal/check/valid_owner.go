@@ -229,8 +229,6 @@ func (v *ValidOwner) validateTeam(ctx context.Context, name string) *validateErr
 				continue
 			}
 
-            fmt.Fprintf(os.Stdout, "permission: %s, %s\n", team, k)
-
 			switch k {
 			case
 				"admin",
